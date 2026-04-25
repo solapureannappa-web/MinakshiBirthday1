@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday Minu 🎂</title>
+  <title>Happy Birthday Minakshi 🎂</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -195,9 +195,8 @@
   ╚══════════════════════════════════════════════════════╝
 -->
 <audio id="bg-audio" loop preload="auto">
-  <source src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/jaisemerat_NkIxrAeA.mp3" type="audio/mpeg"/>
-</audio>
-
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"/>
+<audio>
 <!-- ══ FLOATING MUSIC BUTTON ══ -->
 <button id="music-btn" title="Toggle Music">🎵</button>
 
@@ -359,5 +358,9 @@
   function closeLightbox(){document.getElementById('lightbox').classList.remove('active');}
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
 
-  /* ── Scroll Reveal ── */
-  const obs=new IntersectionObserver(entr
+/* ── Scroll Reveal ── */
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),Number(e.target.dataset.delay||0));obs.unobserve(e.target);}});},{threshold:.2});
+  document.querySelectorAll('.wish-card').forEach(c=>obs.observe(c));
+</script>
+</body>
+</html>
